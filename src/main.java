@@ -27,7 +27,12 @@ public class main {
                 System.out.println("Enter dob");
                 String dob = scanner.nextLine();
                 System.out.println("Enter email");
-                String email = scanner.nextLine();
+                String email = "";
+                if (scanner.hasNext("[A-Za-z0-9]*@[A-za-z]*.com")){
+                   email = scanner.nextLine();
+                }else {
+                    System.out.println("incorrect email");
+                }
                 System.out.println("Enter address");
                 String address = scanner.nextLine();
                 Employee emp = new Employee();
