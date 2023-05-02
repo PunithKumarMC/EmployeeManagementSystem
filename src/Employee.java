@@ -9,6 +9,9 @@ public class Employee {
 
     private String Address;
 
+    public Employee() {
+    }
+
     public Employee(int employeeId, String name, String dob, String email, String address) {
         EmployeeId = employeeId;
         Name = name;

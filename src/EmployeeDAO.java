@@ -1,21 +1,21 @@
 public class EmployeeDAO {
 
-   public void addEmployee(Employee employee){
+   public static void addEmployee(Employee employee){
 
    }
 
-   public void  getEmployeeByName(String name){
+   public static void  getEmployeeByName(String name){
 
    }
-   public void  getEmployeeByEmail(String email){
-
-   }
-
-   public void  getEmployeeById(int id){
+   public static void  getEmployeeByEmail(String email){
 
    }
 
-   public void   getAllEmployees(){
+   public static void  getEmployeeById(int id){
+
+   }
+
+   public static void   getAllEmployees(){
 
    }
 
