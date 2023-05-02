@@ -32,6 +32,7 @@ public class main {
                    email = scanner.next();
                 }else {
                     System.out.println("incorrect email");
+                    supportMain(con);
                 }
                 System.out.println("Enter address");
                 String address = scanner.next();
