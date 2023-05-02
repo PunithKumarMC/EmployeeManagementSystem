@@ -7,7 +7,7 @@ public class main {
     public static void main(String[] args) {
         Connection connection = null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Employees","root","Punith@9535");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employees","root","Punith@9535");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -31,31 +31,31 @@ public class main {
                 System.out.println("Enter address");
                 String address = scanner.nextLine();
                 Employee emp = new Employee();
-                emp.setName(name);
+                emp.setEmployeename(name);
                 emp .setDob(dob);
                 emp.setEmail(email);
                 emp.setAddress(address);
-                EmployeeDAO.addEmployee(emp);
+                EmployeeDAO.addEmployee(emp,con);
                 break;
             case 2:
                 System.out.println("Enter name of Employee to search");
                 String ename = scanner.nextLine();
-                EmployeeDAO.getEmployeeByName(ename);
+                EmployeeDAO.getEmployeeByName(ename,con);
                 break;
 
             case 3:
                 System.out.println("Enter Email of Employee to search");
                 String eemail = scanner.nextLine();
-                EmployeeDAO.getEmployeeByEmail(eemail);
+                EmployeeDAO.getEmployeeByEmail(eemail,con);
                 break;
             case 4:
                 System.out.println("Enter Employee Id  to search");
                 int eid = scanner.nextInt();
-                EmployeeDAO.getEmployeeById(eid);
+                EmployeeDAO.getEmployeeById(eid,con);
                 break;
             case 5:
                 System.out.println("Getting all Employees");
-                EmployeeDAO.getAllEmployees();
+                EmployeeDAO.getAllEmployees(con);
                 break;
             default:
                 System.out.println("Wrong input !....");

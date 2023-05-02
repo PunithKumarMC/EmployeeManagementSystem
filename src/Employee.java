@@ -1,39 +1,41 @@
 public class Employee {
-    private int EmployeeId;
+    private int employeeId;
 
-    private String Name;
+    private String employeename;
 
     private String dob;
 
-    private String Email;
 
-    private String Address;
+    private String email;
+
+    private String address;
+
 
     public Employee() {
     }
 
     public Employee(int employeeId, String name, String dob, String email, String address) {
-        EmployeeId = employeeId;
-        Name = name;
+        employeeId = employeeId;
+        employeename = name;
         this.dob = dob;
-        Email = email;
-        Address = address;
+        this.email = email;
+        this.address = address;
     }
 
     public int getEmployeeId() {
-        return EmployeeId;
+        return employeeId;
     }
 
     public void setEmployeeId(int employeeId) {
-        EmployeeId = employeeId;
+        employeeId = employeeId;
     }
 
-    public String getName() {
-        return Name;
+    public String getEmployeename() {
+        return employeename;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setEmployeename(String employeename) {
+        this.employeename = employeename;
     }
 
     public String getDob() {
@@ -45,29 +47,29 @@ public class Employee {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "EmployeeId=" + EmployeeId +
-                ", Name='" + Name + '\'' +
+                "EmployeeId=" + employeeId +
+                ", Name='" + employeename + '\'' +
                 ", dob='" + dob + '\'' +
-                ", Email='" + Email + '\'' +
-                ", Address='" + Address + '\'' +
+                ", Email='" + email + '\'' +
+                ", Address='" + address + '\'' +
                 '}';
     }
 }
