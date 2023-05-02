@@ -31,7 +31,7 @@ public class EmployeeDAO {
             System.out.println(rs.getString("employeename")+" "+rs.getString("dob")+" "+rs.getString("email")+" "+rs.getString("address"));
          }else{
             System.out.println("enter correct name");
-            getEmployeeByName(name, con);
+
          }
       } catch (SQLException e) {
          throw new RuntimeException(e);
@@ -47,7 +47,6 @@ public class EmployeeDAO {
             System.out.println(rs.getString("employeename")+" "+rs.getString("dob")+" "+rs.getString("email")+" "+rs.getString("address"));
          }else{
             System.out.println("enter correct email");
-            getEmployeeByEmail(email, con);
          }
       } catch (SQLException e) {
          throw new RuntimeException(e);
@@ -64,7 +63,6 @@ public class EmployeeDAO {
             System.out.println(rs.getString("employeename")+" "+rs.getString("dob")+" "+rs.getString("email")+" "+rs.getString("address"));
          }else{
             System.out.println("enter correct id");
-            getEmployeeById(id, con);
          }
       } catch (SQLException e) {
          throw new RuntimeException(e);
